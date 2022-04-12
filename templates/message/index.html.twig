@@ -1,0 +1,18 @@
+{% extends 'user.html.twig' %}
+
+{% block title %}Hello MessageController!{% endblock %}
+
+{% block body %}
+
+<section class ="Discussion">
+
+
+    {% for t in tab %}
+        <div class="metadata">
+            Ecrit le   à dans le cadre politique
+            <a href="" class="btn btn-primary"> Lire la suite</a>
+        </div>
+
+    {% endfor %}
+</section>
+{% endblock %}

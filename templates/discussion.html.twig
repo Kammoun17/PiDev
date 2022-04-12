@@ -1,0 +1,32 @@
+{% extends 'userChat.html.twig' %}
+
+{% block title %}Hello MessageController!{% endblock %}
+
+{% block body %}
+
+
+
+
+    <center>
+    {% for dis in discussion %}
+        <article>
+            <div> {{ dis.IdUtilisateur.Nom }} {{ dis.IdUtilisateur.Prenom }} : </div>
+            <h2> {{ dis.Message}}</h2>
+
+            <div class="metadata">
+                Ecrit le  {{ dis.Date | date('d:m:Y') }}
+
+                {% if dis.IdUtilisateur.IdUser == 12 %}
+
+                    <a href="{{path('d',{'id':dis.IdMessage}) }}">Delete</a>
+                {% endif %}
+                <br>
+                <br>
+            </div>
+
+        </article>
+
+    {% endfor %}
+  {{ form(form) }}
+    </center>
+{% endblock %}

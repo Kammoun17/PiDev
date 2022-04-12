@@ -1,0 +1,22 @@
+{% extends 'userChat.html.twig' %}
+
+{% block title %}Hello MessageController!{% endblock %}
+
+{% block body %}
+
+
+        {% for t in tab %}
+            <article>
+
+                <h2> </h2>
+
+                <div class="metadata">
+                        <a href="{{path('d',{'id':dis.IdMessage}) }}">Delete</a>
+                </div>
+
+            </article>
+
+        {% endfor %}
+        {{ form(form) }}
+    </center>
+{% endblock %}
